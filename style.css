@@ -2,79 +2,183 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: Arial, sans-serif;
     background: #0f172a;
     color: white;
+    line-height: 1.6;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 20px 50px;
-    background: #111827;
+    align-items: center;
+    padding: 15px 80px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #3b82f6;
 }
 
 nav ul {
     display: flex;
     list-style: none;
+    gap: 25px;
 }
 
-nav ul li {
-    margin-left: 20px;
-}
-
-nav a {
-    color: white;
+nav ul li a {
     text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #3b82f6;
 }
 
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 100px;
+    align-items: center;
+    padding: 0 100px;
+}
+
+.hero-content {
+    max-width: 700px;
 }
 
 .hero h1 {
     font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-size: 1.8rem;
+    color: #3b82f6;
+    margin-bottom: 20px;
 }
 
 .hero p {
-    margin: 20px 0;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
 }
 
 .btn {
-    background: #2563eb;
+    background: #3b82f6;
     color: white;
-    padding: 12px 20px;
-    width: fit-content;
+    padding: 14px 28px;
+    border-radius: 10px;
     text-decoration: none;
-    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #2563eb;
 }
 
 section {
-    padding: 80px 100px;
+    padding: 100px 80px;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #3b82f6;
 }
 
 .cards {
     display: flex;
-    gap: 20px;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .card {
     background: #1e293b;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 12px;
+    min-width: 220px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background: #334155;
 }
 
 .project {
     background: #1e293b;
-    margin-top: 20px;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+}
+
+.project h3 {
+    margin-bottom: 15px;
+    color: #3b82f6;
+}
+
+.project ul {
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.project li {
+    margin-bottom: 8px;
+}
+
+#about p,
+#contact p {
+    margin-bottom: 20px;
+    max-width: 900px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #111827;
+    margin-top: 50px;
+}
+
+@media (max-width: 900px) {
+    nav {
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 0 30px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    section {
+        padding: 70px 30px;
+    }
+
+    .cards {
+        justify-content: center;
+    }
 }
