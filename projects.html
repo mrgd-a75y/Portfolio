@@ -1,33 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projets | Mohamed Ragued</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav><a href="index.html">Retour</a></nav>
+<header>
+<nav>
+<div class="logo">Mohamed Ragued</div>
+<ul>
+<li><a href="index.html">Accueil</a></li>
+<li><a href="projets.html">Projets</a></li>
+<li><a href="certifications.html">Certifications</a></li>
+<li><a href="veille.html">Veille</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</header>
 
-<section>
+<section class="projects-page">
+
 <h1>Mes projets</h1>
+<p class="subtitle">
+Découvrez les différents projets techniques réalisés durant mon BTS SIO SISR et mon alternance.
+</p>
 
-<div class="project-card">
+<div class="project-grid">
+
+<div class="project-box">
+<span>Projet BTS</span>
 <h2>Reverse Proxy Nginx</h2>
-<p>Déploiement d’un Reverse Proxy sécurisé.</p>
+<p>
+Mise en place d’un reverse proxy sécurisé sur Debian avec Nginx dans une architecture Proxmox.
+</p>
 
-<a href="docs/reverse-proxy.pdf" download class="btn">
-Télécharger la documentation
-</a>
+<div class="project-links">
+<a href="docs/reverse-proxy.pdf" download>Télécharger</a>
+</div>
 </div>
 
-<div class="project-card">
-<h2>Infrastructure Electronike</h2>
-<p>Déploiement complet d’une infrastructure Proxmox.</p>
+<div class="project-box">
+<span>Projet Infrastructure</span>
+<h2>Electronike</h2>
+<p>
+Déploiement complet d’une infrastructure virtualisée avec Firewall, DNS, DHCP, Logs et accès distant.
+</p>
 
-<a href="docs/architecture.pdf" download class="btn">
-Télécharger l’architecture
-</a>
+<div class="project-links">
+<a href="docs/architecture.pdf" download>Télécharger</a>
+</div>
 </div>
 
+<div class="project-box">
+<span>Alternance</span>
+<h2>Projet OMADA</h2>
+<p>
+Configuration de routeurs TP-Link, création de liens Radius et déploiement réseau professionnel.
+</p>
+</div>
+
+<div class="project-box">
+<span>Alternance</span>
+<h2>Migration Centreon</h2>
+<p>
+Participation à la migration de la supervision Centreon V1 vers Centreon V2.
+</p>
+</div>
+
+</div>
 </section>
 
 </body>
